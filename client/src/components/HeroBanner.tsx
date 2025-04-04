@@ -8,32 +8,33 @@ export default function HeroBanner() {
         <img src={devBackgroundSrc} alt="Anime Developer Background" className="w-full h-full object-cover" />
       </div>
       
-      {/* Semi-transparent overlay to help with text readability - using Microsoft blue colors */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 to-blue-700/20"></div>
+      {/* Very subtle overlay for text readability - minimal approach */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/30"></div>
       
-      {/* Main heading positioned at the top left - where there's clear space in the image */}
-      <div className="absolute top-10 left-10 md:left-20 z-10 px-4 text-left">
-        <h1 className="text-4xl md:text-6xl font-bold text-white" 
+      {/* Clean, minimal heading at the top */}
+      <div className="absolute top-14 left-14 md:left-24 z-10">
+        <h1 className="text-4xl md:text-5xl font-bold text-white" 
           style={{
             fontFamily: "Arial, sans-serif",
-            textShadow: "2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000"
+            letterSpacing: "-0.5px",
+            textShadow: "0 2px 4px rgba(0,0,0,0.5)"
           }}>
           Cheers to 50 years
         </h1>
         
-        {/* Description paragraph positioned below the heading */}
-        <p className="mt-4 text-white text-lg max-w-md"
+        {/* Clean, concise description */}
+        <p className="mt-3 text-white text-lg max-w-sm"
           style={{
             fontFamily: "Arial, sans-serif",
-            textShadow: "1px 1px 3px rgba(0, 0, 0, 0.9)"
+            fontWeight: "400",
+            textShadow: "0 1px 2px rgba(0,0,0,0.6)"
           }}>
-          Join us as we celebrate all the bold, curious, exhilarating achievements
-          since 1975.
+          Join us in celebrating five decades of innovation since 1975.
         </p>
         
-        {/* Learn more button positioned below paragraph */}
+        {/* Microsoft-style button */}
         <button 
-          className="mt-6 px-8 py-3 rounded-md text-white font-bold bg-red-600 hover:bg-red-700 transition-colors duration-300"
+          className="mt-5 px-5 py-2 rounded text-white font-medium bg-blue-600 hover:bg-blue-700 transition-all"
           style={{
             fontFamily: "Arial, sans-serif"
           }}
@@ -42,23 +43,14 @@ export default function HeroBanner() {
         </button>
       </div>
       
-      {/* Right side text positioning - celebrating development context */}
-      <div className="absolute bottom-10 right-10 md:right-20 z-10 px-4 text-right">
-        <h2 className="text-3xl md:text-4xl font-bold text-white" 
+      {/* Simple label at bottom right - minimal approach */}
+      <div className="absolute bottom-10 right-10 z-10">
+        <p className="text-white text-sm font-semibold"
           style={{
             fontFamily: "Arial, sans-serif",
-            textShadow: "2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000"
+            textShadow: "0 1px 2px rgba(0,0,0,0.6)"
           }}>
-          Building the future
-        </h2>
-        
-        <p className="mt-2 text-white text-base max-w-md ml-auto"
-          style={{
-            fontFamily: "Arial, sans-serif",
-            textShadow: "1px 1px 3px rgba(0, 0, 0, 0.9)"
-          }}>
-          From coding innovations to gaming breakthroughs,
-          we continue to push boundaries together.
+          Microsoft • 1975-2025
         </p>
       </div>
     </section>
