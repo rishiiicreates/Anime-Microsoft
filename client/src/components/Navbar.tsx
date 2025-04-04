@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Search, ShoppingCart, User, Menu, Sparkles } from "lucide-react";
 
 // Import anime-styled logo
-const animeMsLogoSrc = "/src/assets/anime/anime-ms-logo.svg";
+import animeMsLogoSrc from "../assets/anime/anime-ms-logo.svg";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

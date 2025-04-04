@@ -1,8 +1,8 @@
 import { useEffect, useState, useRef } from "react";
 
 // Import anime-themed assets
-const animeBackgroundSrc = "/src/assets/anime/anime-bg.svg";
-const animeCharacterSrc = "/src/assets/anime/anime-character.svg";
+import animeBackgroundSrc from "../assets/anime/anime-bg.png";
+import animeCharacterSrc from "../assets/anime/anime-character.svg";
 
 export default function HeroBanner() {
   const [isVisible, setIsVisible] = useState(false);

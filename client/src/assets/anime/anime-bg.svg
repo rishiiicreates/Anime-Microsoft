@@ -1,64 +1,46 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Anime-style background -->
   <defs>
-    <!-- Anime-style sparkle pattern -->
-    <pattern id="sparklePattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
-      <circle cx="20" cy="20" r="2" fill="#FFD700" />
-      <circle cx="60" cy="40" r="1.5" fill="#FF6B9E" />
-      <circle cx="100" cy="25" r="2.5" fill="#8A2BE2" />
-      <circle cx="150" cy="60" r="2" fill="#FFD700" />
-      <circle cx="180" cy="100" r="3" fill="#FF6B9E" />
-      <circle cx="30" cy="140" r="2" fill="#8A2BE2" />
-      <circle cx="75" cy="175" r="1.5" fill="#FFD700" />
-      <circle cx="125" cy="150" r="2" fill="#FF6B9E" />
-      <circle cx="170" cy="180" r="2.5" fill="#8A2BE2" />
-    </pattern>
-    
-    <!-- Anime cloud shapes filter -->
-    <filter id="anime-blur" x="0" y="0" width="100%" height="100%">
-      <feGaussianBlur stdDeviation="15" />
-    </filter>
-    
-    <!-- Anime-style glow effect -->
-    <filter id="anime-glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-      <feColorMatrix in="blur" mode="matrix" values="
-        1 0 0 0 0
-        0 1 0 0 0
-        0 0 1 0 0
-        0 0 0 20 -8" result="glow" />
-      <feComposite in="SourceGraphic" in2="glow" operator="over" />
-    </filter>
-    
-    <!-- Anime-style radial gradient for sky -->
-    <radialGradient id="anime-sky" cx="50%" cy="50%" r="80%" fx="50%" fy="50%">
-      <stop offset="0%" stop-color="#9370DB" />
-      <stop offset="50%" stop-color="#8A2BE2" />
-      <stop offset="100%" stop-color="#4B0082" />
+    <radialGradient id="skyGrad" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#84D6FF"/>
+      <stop offset="100%" stop-color="#4A90E2"/>
     </radialGradient>
+    <linearGradient id="cloudGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E6F7FF"/>
+    </linearGradient>
   </defs>
-  
-  <!-- Background -->
-  <rect width="100%" height="100%" fill="url(#anime-sky)" />
-  
-  <!-- Sparkle layer -->
-  <rect width="100%" height="100%" fill="url(#sparklePattern)" opacity="0.5" />
-  
+
+  <!-- Sky background -->
+  <rect width="1200" height="800" fill="url(#skyGrad)"/>
+
   <!-- Anime-style clouds -->
-  <g filter="url(#anime-blur)" opacity="0.6">
-    <ellipse cx="200" cy="150" rx="120" ry="70" fill="#FF6B9E" opacity="0.3" />
-    <ellipse cx="400" cy="100" rx="150" ry="60" fill="#9370DB" opacity="0.3" />
-    <ellipse cx="700" cy="200" rx="180" ry="80" fill="#FF6B9E" opacity="0.3" />
-    <ellipse cx="1000" cy="100" rx="140" ry="60" fill="#9370DB" opacity="0.3" />
+  <g opacity="0.8">
+    <!-- Cloud 1 -->
+    <path d="M100 200 Q130 170 170 180 Q190 150 230 160 Q260 150 280 180 Q310 170 330 200 Q320 230 280 240 Q260 270 220 255 Q190 275 160 250 Q120 260 100 230 Q90 220 100 200" fill="url(#cloudGrad)" stroke="#FFFFFF" stroke-width="2"/>
+    
+    <!-- Cloud 2 -->
+    <path d="M700 150 Q730 120 770 130 Q790 100 830 110 Q860 100 880 130 Q910 120 930 150 Q920 180 880 190 Q860 220 820 205 Q790 225 760 200 Q720 210 700 180 Q690 170 700 150" fill="url(#cloudGrad)" stroke="#FFFFFF" stroke-width="2"/>
+    
+    <!-- Cloud 3 -->
+    <path d="M300 400 Q330 370 370 380 Q390 350 430 360 Q460 350 480 380 Q510 370 530 400 Q520 430 480 440 Q460 470 420 455 Q390 475 360 450 Q320 460 300 430 Q290 420 300 400" fill="url(#cloudGrad)" stroke="#FFFFFF" stroke-width="2"/>
+    
+    <!-- Cloud 4 -->
+    <path d="M800 350 Q830 320 870 330 Q890 300 930 310 Q960 300 980 330 Q1010 320 1030 350 Q1020 380 980 390 Q960 420 920 405 Q890 425 860 400 Q820 410 800 380 Q790 370 800 350" fill="url(#cloudGrad)" stroke="#FFFFFF" stroke-width="2"/>
   </g>
-  
-  <!-- Anime-style line decorations -->
-  <g opacity="0.4">
-    <path d="M0,300 C100,250 200,350 300,300 S500,200 700,300 S900,400 1200,300" 
-          stroke="#FFD700" stroke-width="2" fill="none" />
-    <path d="M0,350 C100,400 300,300 500,350 S700,450 900,350 S1100,250 1200,350" 
-          stroke="#FF6B9E" stroke-width="2" fill="none" />
-    <path d="M0,400 C150,350 300,450 450,400 S750,300 900,400 S1050,500 1200,400" 
-          stroke="#8A2BE2" stroke-width="2" fill="none" />
+
+  <!-- Anime-style sparkles -->
+  <g>
+    <circle cx="200" cy="150" r="3" fill="white"/>
+    <circle cx="500" cy="250" r="2" fill="white"/>
+    <circle cx="800" cy="200" r="4" fill="white"/>
+    <circle cx="1000" cy="300" r="3" fill="white"/>
+    <circle cx="300" cy="350" r="2" fill="white"/>
+    <circle cx="700" cy="400" r="3" fill="white"/>
+    <circle cx="900" cy="150" r="2" fill="white"/>
+    <circle cx="100" cy="300" r="3" fill="white"/>
+    <circle cx="1100" cy="200" r="2" fill="white"/>
+    <circle cx="600" cy="100" r="3" fill="white"/>
   </g>
 </svg>
