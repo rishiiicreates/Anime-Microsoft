@@ -8,8 +8,8 @@ export default function HeroBanner() {
         <img src={devBackgroundSrc} alt="Anime Developer Background" className="w-full h-full object-cover" />
       </div>
       
-      {/* Semi-transparent overlay to help with text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 to-purple-900/30"></div>
+      {/* Semi-transparent overlay to help with text readability - using Microsoft blue colors */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 to-blue-700/20"></div>
       
       {/* Main heading positioned at the top left - where there's clear space in the image */}
       <div className="absolute top-10 left-10 md:left-20 z-10 px-4 text-left">
