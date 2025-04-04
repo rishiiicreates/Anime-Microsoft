@@ -76,8 +76,8 @@ export default function Navbar() {
       ref={navRef}
       className={`sticky top-0 z-50 transition-all duration-500 ${
         scrolled 
-          ? "bg-gradient-to-r from-purple-600/90 to-pink-600/90 backdrop-blur-md shadow-lg text-white" 
-          : "bg-white/95 backdrop-blur-sm shadow-md text-gray-800"
+          ? "bg-gradient-to-r from-purple-600/40 to-pink-600/40 backdrop-blur-md shadow-lg text-white" 
+          : "bg-white/30 backdrop-blur-sm shadow-md text-gray-800"
       }`}
     >
       {/* Anime style decorative elements */}
