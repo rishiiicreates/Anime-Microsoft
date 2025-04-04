@@ -75,17 +75,17 @@ export default function ProductSection() {
   return (
     <section 
       ref={sectionRef} 
-      className="py-10 bg-gradient-to-b from-white via-purple-50 to-white relative overflow-hidden"
+      className="py-10 bg-gradient-to-b from-white via-blue-50 to-white relative overflow-hidden paper-texture"
     >
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-10 -left-10 w-40 h-40 bg-purple-200 rounded-full opacity-20 animate-float-slow"></div>
-        <div className="absolute top-1/4 -right-20 w-60 h-60 bg-pink-200 rounded-full opacity-20 animate-float"></div>
+        <div className="absolute -top-10 -left-10 w-40 h-40 bg-blue-200 rounded-full opacity-20 animate-float-slow"></div>
+        <div className="absolute top-1/4 -right-20 w-60 h-60 bg-blue-200 rounded-full opacity-20 animate-float"></div>
         <div className="absolute -bottom-20 left-1/4 w-80 h-80 bg-blue-200 rounded-full opacity-20 animate-float-reverse"></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-center text-3xl md:text-4xl font-bold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-500 animate-glow">
+        <h2 className="text-center text-3xl md:text-4xl font-bold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500 animate-glow">
           Find your next favorite
         </h2>
         
@@ -93,7 +93,7 @@ export default function ProductSection() {
           {products.map((product, index) => (
             <div 
               key={product.id} 
-              className={`bg-white bg-opacity-80 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg transition-all duration-500 group relative anime-border ${
+              className={`paper-card paper-edge transition-all duration-500 group relative ${
                 visibleProducts.includes(index) 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-12'
@@ -114,7 +114,7 @@ export default function ProductSection() {
                 />
                 
                 {/* Animated overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 {/* Badge with animation */}
                 {product.badge && (
@@ -145,7 +145,7 @@ export default function ProductSection() {
               
               <div className="p-4 relative z-10">
                 {/* Title with animation */}
-                <h3 className="text-xl font-['Comic_Neue',cursive] bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-pink-600 mb-2 transition-all duration-300 group-hover:scale-[1.02] origin-left transform-gpu">
+                <h3 className="text-xl font-['Comic_Neue',cursive] bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-blue-500 mb-2 transition-all duration-300 group-hover:scale-[1.02] origin-left transform-gpu">
                   {product.title}
                 </h3>
                 
@@ -166,7 +166,7 @@ export default function ProductSection() {
                       <ChevronRight className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
                       
                       {/* Animated underline effect */}
-                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
+                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
                     </a>
                   ))}
                 </div>
@@ -174,13 +174,13 @@ export default function ProductSection() {
               
               {/* Corner decoration - anime style */}
               <div className="absolute top-0 left-0 w-16 h-16 overflow-hidden opacity-80 pointer-events-none">
-                <div className="absolute -top-8 -left-8 w-16 h-16 bg-gradient-to-br from-purple-400/30 to-pink-400/30 rotate-45 transform-gpu"></div>
+                <div className="absolute -top-8 -left-8 w-16 h-16 bg-gradient-to-br from-blue-400/30 to-blue-500/30 rotate-45 transform-gpu"></div>
               </div>
               
               {/* Glowing border effect that activates on hover */}
               <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" 
                    style={{ 
-                     boxShadow: '0 0 15px rgba(138, 43, 226, 0.3), 0 0 30px rgba(255, 107, 158, 0.2)',
+                     boxShadow: '0 0 15px rgba(0, 120, 215, 0.3), 0 0 30px rgba(0, 170, 255, 0.2)',
                    }}>
               </div>
             </div>
