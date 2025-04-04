@@ -111,8 +111,8 @@
 }
 
 @keyframes glow {
-  0% { filter: drop-shadow(0 0 2px rgba(255, 107, 158, 0.6)); }
-  100% { filter: drop-shadow(0 0 10px rgba(138, 43, 226, 0.8)) drop-shadow(0 0 20px rgba(255, 107, 158, 0.7)); }
+  0% { filter: drop-shadow(0 0 2px rgba(0, 120, 215, 0.6)); }
+  100% { filter: drop-shadow(0 0 10px rgba(0, 120, 215, 0.8)) drop-shadow(0 0 20px rgba(0, 191, 255, 0.7)); }
 }
 
 @keyframes appear {
@@ -154,11 +154,11 @@
 
 /* Custom anime styles */
 .text-anime-shadow {
-  text-shadow: 2px 2px 0px #ff6b9e, 4px 4px 0px #8a2be2;
+  text-shadow: 2px 2px 0px #0078D7, 4px 4px 0px #00ADEF;
 }
 
 .anime-glow {
-  filter: drop-shadow(0 0 8px rgba(255, 107, 158, 0.8));
+  filter: drop-shadow(0 0 8px rgba(0, 120, 215, 0.8));
 }
 
 .anime-border {
@@ -171,7 +171,7 @@
   inset: -3px;
   border: 2px solid transparent;
   border-radius: inherit;
-  background: linear-gradient(45deg, #ff6b9e, #8a2be2, #4a90e2, #50e3c2) border-box;
+  background: linear-gradient(45deg, #0078D7, #00ADEF, #4a90e2, #50e3c2) border-box;
   mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   animation: gradient-shift 4s linear infinite;
@@ -207,4 +207,88 @@
 
 .ms-anime-button:hover:before {
   left: 100%;
+}
+
+/* Top-notch professional animations for GamePassSection */
+@keyframes pulse-border {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse-border {
+  animation: pulse-border 3s ease-in-out infinite;
+}
+
+.delay-150 {
+  animation-delay: 150ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+/* Advanced light pulse animation */
+@keyframes pulse-light {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+.animate-pulse-light {
+  animation: pulse-light 2s ease-in-out infinite;
+}
+
+/* Character reveal animation for text */
+@keyframes character-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.animate-character-reveal {
+  animation: character-reveal 0.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) forwards;
+}
+
+/* Professional shine effect */
+@keyframes shine {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
+}
+
+.animate-shine {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: shine 2s infinite linear;
 }
