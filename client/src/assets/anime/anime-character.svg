@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="400" height="500" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Hair gradient -->
+    <linearGradient id="hair-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8a2be2" />
+      <stop offset="100%" stop-color="#4B0082" />
+    </linearGradient>
+    
+    <!-- Skin gradient -->
+    <linearGradient id="skin-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE5B4" />
+      <stop offset="100%" stop-color="#FFDAB9" />
+    </linearGradient>
+    
+    <!-- Eye gradient -->
+    <radialGradient id="eye-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#00BFFF" />
+      <stop offset="90%" stop-color="#1E90FF" />
+      <stop offset="100%" stop-color="#0000CD" />
+    </radialGradient>
+    
+    <!-- Clothing gradient -->
+    <linearGradient id="clothing-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B9E" />
+      <stop offset="100%" stop-color="#FF1493" />
+    </linearGradient>
+    
+    <!-- Glow filter -->
+    <filter id="character-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="
+        1 0 0 0 0
+        0 1 0 0 0
+        0 0 1 0 0
+        0 0 0 10 -5" result="glow" />
+      <feComposite in="SourceGraphic" in2="glow" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Anime character -->
+  <g filter="url(#character-glow)">
+    <!-- Hair (back) -->
+    <path d="M120,120 C80,140 60,200 80,240 C100,280 120,300 140,320 C80,280 60,240 60,200 C60,160 100,100 160,80 C220,60 280,80 320,120 C340,80 320,40 280,20 C240,0 180,20 120,120 Z" 
+          fill="url(#hair-gradient)" />
+    
+    <!-- Face/Head -->
+    <ellipse cx="200" cy="160" rx="80" ry="100" fill="url(#skin-gradient)" />
+    
+    <!-- Eyes -->
+    <g>
+      <!-- Left eye -->
+      <ellipse cx="170" cy="150" rx="15" ry="20" fill="white" />
+      <ellipse cx="170" cy="150" rx="10" ry="15" fill="url(#eye-gradient)" />
+      <circle cx="170" cy="148" r="5" fill="#000" />
+      <circle cx="175" cy="145" r="3" fill="white" opacity="0.8" />
+      
+      <!-- Right eye -->
+      <ellipse cx="230" cy="150" rx="15" ry="20" fill="white" />
+      <ellipse cx="230" cy="150" rx="10" ry="15" fill="url(#eye-gradient)" />
+      <circle cx="230" cy="148" r="5" fill="#000" />
+      <circle cx="235" cy="145" r="3" fill="white" opacity="0.8" />
+      
+      <!-- Eyelashes -->
+      <path d="M155,135 L150,130 M160,130 L157,123 M173,130 L175,123" 
+            stroke="#000" stroke-width="2" fill="none" />
+      <path d="M245,135 L250,130 M240,130 L243,123 M227,130 L225,123" 
+            stroke="#000" stroke-width="2" fill="none" />
+    </g>
+    
+    <!-- Eyebrows -->
+    <path d="M155,125 C165,120 175,120 185,125" stroke="#8a2be2" stroke-width="3" fill="none" />
+    <path d="M215,125 C225,120 235,120 245,125" stroke="#8a2be2" stroke-width="3" fill="none" />
+    
+    <!-- Nose -->
+    <path d="M200,160 L205,175 L200,177" stroke="#FFAA88" stroke-width="1.5" fill="none" />
+    
+    <!-- Mouth -->
+    <path d="M180,195 C190,202 210,202 220,195" stroke="#FF5555" stroke-width="2" fill="none" />
+    
+    <!-- Hair (front) -->
+    <path d="M120,120 C140,80 200,60 260,80 L270,90 L280,60 C230,40 160,60 120,120 Z" 
+          fill="url(#hair-gradient)" />
+    <path d="M140,100 L150,140 L120,160" stroke="url(#hair-gradient)" stroke-width="10" fill="none" />
+    <path d="M260,100 L250,140 L280,160" stroke="url(#hair-gradient)" stroke-width="10" fill="none" />
+    <path d="M180,80 L160,60 L170,100 Z" fill="url(#hair-gradient)" />
+    <path d="M220,80 L240,60 L230,100 Z" fill="url(#hair-gradient)" />
+    <path d="M190,60 L200,40 L210,60 Z" fill="url(#hair-gradient)" />
+    
+    <!-- Neck -->
+    <path d="M180,250 L180,280 L220,280 L220,250" fill="url(#skin-gradient)" />
+    
+    <!-- Clothing -->
+    <path d="M140,280 L160,380 L240,380 L260,280 Z" fill="url(#clothing-gradient)" />
+    <path d="M140,280 L100,340 L80,420 L140,380" fill="url(#clothing-gradient)" />
+    <path d="M260,280 L300,340 L320,420 L260,380" fill="url(#clothing-gradient)" />
+    
+    <!-- Arms -->
+    <path d="M100,340 C80,360 60,400 70,440" stroke="url(#skin-gradient)" stroke-width="20" fill="none" />
+    <path d="M300,340 C320,360 340,400 330,440" stroke="url(#skin-gradient)" stroke-width="20" fill="none" />
+    
+    <!-- Hands -->
+    <circle cx="70" cy="450" r="15" fill="url(#skin-gradient)" />
+    <circle cx="330" cy="450" r="15" fill="url(#skin-gradient)" />
+    
+    <!-- Clothing details -->
+    <path d="M160,300 L240,300" stroke="white" stroke-width="2" fill="none" />
+    <path d="M170,320 L230,320" stroke="white" stroke-width="2" fill="none" />
+    <path d="M180,340 L220,340" stroke="white" stroke-width="2" fill="none" />
+  </g>
+</svg>
