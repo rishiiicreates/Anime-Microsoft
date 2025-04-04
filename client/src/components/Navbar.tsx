@@ -74,11 +74,7 @@ export default function Navbar() {
   return (
     <nav 
       ref={navRef}
-      className={`sticky top-0 z-50 transition-all duration-500 ${
-        scrolled 
-          ? "bg-gradient-to-r from-purple-600/40 to-pink-600/40 backdrop-blur-md shadow-lg text-white" 
-          : "bg-white/30 backdrop-blur-sm shadow-md text-gray-800"
-      }`}
+      className="sticky top-0 z-50 transition-all duration-500 bg-white/80 backdrop-blur-sm shadow-sm"
     >
       {/* Anime style decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -150,10 +146,11 @@ export default function Navbar() {
               
               {/* Microsoft text with anime styling */}
               <span 
-                className={`ml-2 font-bold text-lg font-['Comic_Neue',cursive] transition-all duration-300 ${
-                  scrolled ? 'text-white' : 'text-gray-800'
-                } ${logoHovered ? 'text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500' : ''}`}
+                className={`ml-2 font-bold text-lg transition-all duration-300 text-gray-800 ${
+                  logoHovered ? 'text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500' : ''
+                }`}
                 style={{
+                  fontFamily: "Arial, sans-serif",
                   textShadow: logoHovered ? '0 0 8px rgba(138, 43, 226, 0.5)' : 'none'
                 }}
               >
@@ -175,13 +172,12 @@ export default function Navbar() {
                 <a 
                   key={index}
                   href="#" 
-                  className={`px-3 py-1.5 rounded-full text-sm transition-all duration-300 font-['Comic_Neue',cursive] relative overflow-hidden group ${
+                  className={`px-3 py-1.5 rounded-full text-sm transition-all duration-300 relative overflow-hidden group ${
                     animatedItems.includes(index) ? "animate-appear" : "opacity-0"
-                  } ${
-                    scrolled ? 'text-white hover:text-white' : 'text-gray-800 hover:text-pink-500'
-                  }`}
+                  } text-gray-800 hover:text-pink-500`}
                   style={{ 
                     animationDelay: `${index * 100}ms`,
+                    fontFamily: "Arial, sans-serif"
                   }}
                   onMouseEnter={handleNavHover}
                 >
@@ -206,9 +202,9 @@ export default function Navbar() {
           <div className="flex items-center">
             {/* Dropdown for All Microsoft */}
             <div className="hidden md:flex items-center mr-4 animate-appear" style={{ animationDelay: "600ms" }}>
-              <button className={`group flex items-center px-3 py-1.5 rounded-full text-sm transition-all duration-300 font-['Comic_Neue',cursive] relative overflow-hidden ${
-                scrolled ? 'text-white hover:text-white' : 'text-gray-800 hover:text-pink-500'
-              }`}>
+              <button className="group flex items-center px-3 py-1.5 rounded-full text-sm transition-all duration-300 relative overflow-hidden text-gray-800 hover:text-pink-500"
+                style={{ fontFamily: "Arial, sans-serif" }}
+              >
                 {/* Anime-style background on hover */}
                 <span className={`absolute inset-0 bg-gradient-to-r ${
                   scrolled ? 'from-white/20 to-white/10' : 'from-purple-100 to-pink-100'
@@ -237,27 +233,21 @@ export default function Navbar() {
             ].map((item, index) => (
               <div key={index} className="flex items-center mr-4 animate-appear" style={{ animationDelay: item.delay }}>
                 <button 
-                  className={`p-2 transition-all duration-300 hover:scale-110 relative overflow-hidden rounded-full group ${
-                    scrolled ? 'text-white hover:bg-white/20' : 'text-gray-800 hover:bg-purple-100'
-                  }`}
+                  className="p-2 transition-all duration-300 hover:scale-110 relative overflow-hidden rounded-full group text-gray-800 hover:bg-gray-100"
                 >
                   {/* Icon */}
                   {item.icon}
                   
                   {/* Anime-style ring effect on hover */}
                   <span 
-                    className={`absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 ${
-                      scrolled ? 'border border-white/40' : 'border border-purple-300'
-                    }`}
+                    className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 border border-gray-300"
                   ></span>
                   
                   {/* Subtle glow effect */}
                   <span 
-                    className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-60 transition-transform duration-300 transform scale-0 group-hover:scale-100"
+                    className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-40 transition-transform duration-300 transform scale-0 group-hover:scale-100"
                     style={{
-                      background: scrolled ? 
-                        'radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%)' : 
-                        'radial-gradient(circle, rgba(186,104,200,0.2) 0%, rgba(186,104,200,0) 70%)'
+                      background: 'radial-gradient(circle, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 70%)'
                     }}
                   ></span>
                 </button>
